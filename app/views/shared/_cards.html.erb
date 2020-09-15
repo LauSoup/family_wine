@@ -2,7 +2,9 @@
 <% @wines.each do |wine| %>
 
   <article class="cardcusto">
-    <div class="thumb"></div>
+    <div class="thumb" style="background-image: url('https://tse2.mm.bing.net/th?id=OIP.Y7_TGNY4UCad1DjyLvuVHAHaJ4&pid=Api');"> 
+      <!--<%= image_tag("cote-roti-trilo.png")%>-->
+    </div>
     <div class="infos">
         <h2 class="title"> <%= wine.name %> <span class="flag"></span></h2>
         <h3 class="date"> <%= wine.region.region_name %> </h3>

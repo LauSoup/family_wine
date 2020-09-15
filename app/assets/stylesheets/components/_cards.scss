@@ -43,7 +43,7 @@ article.cardcusto {
 	overflow:hidden;
 	.thumb {
 		@include size(auto, $thumb-height);
-		background: url($new-york-city) no-repeat center;
+		background:  no-repeat center;
 		background-size:cover;
 		border-radius:$border-radius;
 	}
