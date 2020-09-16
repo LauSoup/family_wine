@@ -7,4 +7,9 @@ class Wine < ApplicationRecord
   has_many :wine_consos, dependent: :destroy
 
   validates :name, presence: true
+
+  def self.random
+    @wines = Wine.all
+    @wines.sample
+  end
 end

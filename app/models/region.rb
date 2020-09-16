@@ -3,4 +3,9 @@ class Region < ApplicationRecord
 
   validates :region_name, presence: true
 
+  def self.random
+    @regions = Region.all
+    @regions.sample
+  end
+  
 end
