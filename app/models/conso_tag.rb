@@ -3,4 +3,9 @@ class ConsoTag < ApplicationRecord
 
   validates :conso_name, presence: true
 
+  def self.random
+    @consos = ConsoTag.all
+    @consos.sample
+  end
+
 end

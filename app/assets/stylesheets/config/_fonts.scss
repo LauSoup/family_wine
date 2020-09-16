@@ -14,3 +14,25 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+$host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
+
+@font-face {
+  font-family: "Grotesque";
+  src: url('#{$host}BrandonGrotesque-Regular.eot'),
+       url('#{$host}BrandonGrotesque-Regular.ttf'),
+       url('#{$host}BrandonGrotesque-Regular.woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Grotesque Black";
+	src: url('#{$host}BrandonGrotesque-Black.eot'),
+       url('#{$host}BrandonGrotesque-Black.ttf'),
+       url('#{$host}BrandonGrotesque-Black.woff');
+  font-weight: bold;
+}
+
+$grotesque-black:'Grotesque Black', sans-serif;
+$grotesque-regular:'Grotesque', sans-serif;
+$merriweather:'Merriweather', sans-serif;

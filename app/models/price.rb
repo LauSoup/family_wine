@@ -3,4 +3,9 @@ class Price < ApplicationRecord
 
   validates :price_fork, presence: true
 
+  def self.random
+    @price = Price.all
+    @price.sample
+  end
+
 end

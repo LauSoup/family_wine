@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="cardsgrid">
+    <% @wines.each do |wine| %>
+
+      <article class="cardcusto">
+        <div class="thumb" style="background-image: url('https://tse2.mm.bing.net/th?id=OIP.Y7_TGNY4UCad1DjyLvuVHAHaJ4&pid=Api');"> 
+          <!--<%= image_tag("cote-roti-trilo.png")%>-->
+        </div>
+        <div class="infos">
+            <h2 class="title"> <%= wine.name %> <span class="flag"></span></h2>
+            <h3 class="date"> <%= wine.region.region_name %> </h3>
+            <h3 class="seats"> <%= wine.price.price_fork %> </h3>
+            <p class="txt"> <%= wine.description %> </p>
+            <h3 class="details">ajouter en favoris</h3>
+        </div>
+      </article>
+
+    <% end %>
+
+  </div>
+
+</div>
