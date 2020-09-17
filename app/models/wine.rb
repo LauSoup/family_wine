@@ -6,7 +6,12 @@ class Wine < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :wine_consos, dependent: :destroy
 
-  validates :name, presence: true
+  validates :name, :country, presence: true
+  validates :name, uniqueness: true
+
+  COUNTRIES = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australie", "Chili", "Allemagne", "Afrique du Sud", "Chine"]
+  validates :country, inclusion: { in: COUNTRIES }
+
 
   def self.random
     @wines = Wine.all

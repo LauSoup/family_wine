@@ -47,6 +47,8 @@ tags.each do |tag|
 end
 
 p "Creating wines"
+countries = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australie", "Chili", "Allemagne", "Afrique du Sud", "Chine"]
+
 
 10.times do
   name = "Vin #{(1..100).to_a.sample}"
@@ -54,13 +56,15 @@ p "Creating wines"
   user = User.first
   price = Price.random
   region = Region.random
+  country = countries.sample
 
   Wine.create(
     name: name,
     description: description,
     user_id: user.id,
     price_id: price.id,
-    region_id: region.id
+    region_id: region.id,
+    country: country
   )
 end
 
