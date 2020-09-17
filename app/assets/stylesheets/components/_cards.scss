@@ -36,10 +36,17 @@ $flag:'#{$host}flag.png';
 
 .cardsgrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
   align-items: center;
+}
+
+@media(max-width: 1300px) {
+  .cardsgrid {
+    grid-template-columns: 1fr 1fr  1fr 1fr;
+  }
 }
 
 @media(max-width: 1150px) {
