@@ -95,12 +95,14 @@ article.cardcusto {
 			text-shadow: 0 0 0px lighten($big-stone, 20);
 		}
 		.flag {
-			@include pos(absolute, $top:50%, $right: 0);
+			@include pos(absolute, $top:7px, $right: 37px);
 			transform:translateY(-50%);
-			@include size(35px, 23px);
-			background:url($flag) no-repeat top right;
-			background-size:100% auto;
+			@include size(6px, 12px);
 			display:inline-block;
+			img {
+				width: 32px;
+				height: 30px
+			}
 		}
 		.date, .seats {
 			margin-bottom: 10px;
