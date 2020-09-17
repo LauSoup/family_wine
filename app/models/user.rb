@@ -10,4 +10,6 @@ class User < ApplicationRecord
   validates :pseudo, uniqueness: true
   validates :pseudo, presence: true
 
+  has_one_attached :photo
+
 end

@@ -12,6 +12,7 @@ class Wine < ApplicationRecord
   COUNTRIES = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australie", "Chili", "Allemagne", "Afrique du Sud", "Chine"]
   validates :country, inclusion: { in: COUNTRIES }
 
+  
 
   def self.random
     @wines = Wine.all
