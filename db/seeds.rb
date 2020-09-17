@@ -20,7 +20,7 @@ User.destroy_all
 
 p "Creating user admin"
 
-user = User.create(email: "admin@admin.com", password: "password")
+user = User.create(pseudo: "admin", email: "admin@admin.com", password: "password")
 
 p "Creating regions"
 

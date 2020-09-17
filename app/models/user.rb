@@ -6,4 +6,8 @@ class User < ApplicationRecord
   
   has_many :wines
   has_many :favorites, dependent: :destroy
+
+  validates :pseudo, uniqueness: true
+  validates :pseudo, presence: true
+
 end
