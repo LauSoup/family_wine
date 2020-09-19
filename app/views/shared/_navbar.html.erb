@@ -12,9 +12,14 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "hero_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, height: 50, width: 50, gravity: :face, crop: :thumb, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= image_tag  "hero_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Mes vins", "#", class: "dropdown-item" %>
+            <%= link_to "Modifier mes informations", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
