@@ -3,6 +3,10 @@
     <%= image_tag "wine_logo.png" %>
   <% end %>
 
+  <%= link_to new_wine_path, class: "navbar-brand" do %>
+    <%= "Ajouter un nouveau vin" %>
+  <% end %>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
