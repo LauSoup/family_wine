@@ -3,7 +3,7 @@
     <% @wines.each do |wine| %>
 
       <article class="cardcusto">
-        <div class="thumb" style="background-image: url('https://tse2.mm.bing.net/th?id=OIP.Y7_TGNY4UCad1DjyLvuVHAHaJ4&pid=Api');"> 
+        <div class="thumb" style="background-image: url('<%= cl_image_path wine.photo.key, crop: :scale if wine.photo.attached? %>');"> 
         </div>
         <div class="infos">
             <h2 class="title"> <%= wine.name %> </h2>

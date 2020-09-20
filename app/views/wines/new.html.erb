@@ -1,0 +1,23 @@
+
+<div class="container", style="margin-top:14px">
+  <div class="row-forms">
+    <div class="column-forms">
+      <div class="form-container">
+
+        <%= simple_form_for(@wine) do |f| %>
+          <%= f.input :name, label: "Nom du vin" %>
+          <%= f.input :description, label: "Décris-le nous un peu:" %>
+          <%= f.input :country, collection: @countries, label: "Pays" %>
+          <%= f.association :region, label_method: :region_name, value_method: :id, label: "Région" %>
+          <%= f.association :price, label_method: :price_fork, value_method: :id, label: "Prix" %>
+          <%= f.input :photo, as: :file %>
+          <div class="form-actions">
+            <%= f.button :submit, "Valider" %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+

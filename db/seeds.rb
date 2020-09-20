@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require "open-uri"
+
 p "Delete all data"
 
 Favorite.destroy_all
@@ -49,6 +51,9 @@ end
 p "Creating wines"
 countries = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australie", "Chili", "Allemagne", "Afrique du Sud", "Chine"]
 
+img = "https://source.unsplash.com/3uJt73tr4hI"
+file = URI.open(img)
+p file
 
 10.times do
   name = "Vin #{(1..100).to_a.sample}"
@@ -58,7 +63,7 @@ countries = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australi
   region = Region.random
   country = countries.sample
 
-  Wine.create(
+  wine = Wine.create(
     name: name,
     description: description,
     user_id: user.id,
@@ -66,6 +71,8 @@ countries = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australi
     region_id: region.id,
     country: country
   )
+  wine.photo.attach(io: File.open('app/assets/images/glasses.png'), filename: 'glasses.png', content_type: 'image/png')
+
 end
 
 p "Creating wine conso"
