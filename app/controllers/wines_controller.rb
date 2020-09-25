@@ -3,7 +3,6 @@ class WinesController < ApplicationController
   def new
     @wine = Wine.new
     @countries = Wine.countries
-
   end
 
   def create

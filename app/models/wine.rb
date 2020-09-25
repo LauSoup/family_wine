@@ -14,6 +14,8 @@ class Wine < ApplicationRecord
 
   has_one_attached :photo
 
+  validates :photo, presence: true
+
   def self.random
     @wines = Wine.all
     @wines.sample
