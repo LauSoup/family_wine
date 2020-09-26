@@ -1,5 +1,6 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap');
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -18,18 +19,12 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 $host:'https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/';
 
 @font-face {
-  font-family: "Grotesque";
-  src: url('#{$host}BrandonGrotesque-Regular.eot'),
-       url('#{$host}BrandonGrotesque-Regular.ttf'),
-       url('#{$host}BrandonGrotesque-Regular.woff');
+  font-family: 'Darker Grotesque', sans-serif;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "Grotesque Black";
-	src: url('#{$host}BrandonGrotesque-Black.eot'),
-       url('#{$host}BrandonGrotesque-Black.ttf'),
-       url('#{$host}BrandonGrotesque-Black.woff');
+  font-family: 'Darker Grotesque', sans-serif;
   font-weight: bold;
 }
 

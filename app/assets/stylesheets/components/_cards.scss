@@ -98,6 +98,7 @@ article.cardcusto {
       padding-right: 9px;
       text-align: justify;
       text-justify: inter-character;
+      font-weight: bold;
 		}
 		.flag {
 			@include pos(absolute, $top:7px, $right: 37px);

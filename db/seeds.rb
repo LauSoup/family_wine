@@ -53,7 +53,6 @@ countries = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australi
 
 img = "https://source.unsplash.com/3uJt73tr4hI"
 file = URI.open(img)
-p file
 
 10.times do
   name = "Vin #{(1..100).to_a.sample}"
@@ -72,7 +71,6 @@ p file
     country: country
   )
   wine.photo.attach(io: File.open('app/assets/images/glasses.png'), filename: 'glasses.png', content_type: 'image/png')
-
 end
 
 p "Creating wine conso"

@@ -6,10 +6,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 
   h1 {
     color: $light-gray;
     text-align:center;
+    font-family: $grotesque-black;
+    text-transform: uppercase;
+  }
+}
+
+.container-white {
+  display: flex;
+  justify-content: space-around;
+  background-color: $white;
+  height: 50vh;
+  padding-top: 20px
+}
+
+.block {
+  h2 {
+    font-family: $grotesque-black;
+    color: $smalt-blue;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+  }
+  p {
+    font-family: $grotesque-black;
+    margin-bottom: .3rem;
+  }
+  .block-avis {
+    margin-top: 10px;
   }
 }
