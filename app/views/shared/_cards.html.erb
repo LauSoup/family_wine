@@ -10,7 +10,8 @@
             <h3 class="date"> <%= wine.region.region_name %> </h3>
             <h3 class="seats"> <%= wine.price.price_fork %> </h3>
             <p class="txt"> <%= wine.description %> </p>
-            <h3 class="details">ajouter en favoris</h3>
+            <%= link_to "Détails", wine_path(wine), class:"details" %>
+
             <span class="flag"><%= image_tag "#{wine.country}_flag.png" %></span>
         </div>
       </article>

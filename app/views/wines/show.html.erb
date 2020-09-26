@@ -1,3 +1,29 @@
 <div class="header-wine-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @wine.photo.key %>)">
   <h1><%= @wine.name %></h1>
 </div>
+
+<div class="container-white">
+  <div class="block">
+    <div class="block-description">
+      <h2>Description</h2>
+      <p><%= @wine.description %></p>
+    </div>
+    <div class="block-tag">
+      <p>tags</p> 
+    </div>
+    <br>
+    <br>
+    <%= link_to  "Modifier le vin", edit_wine_path(@wine), class:"btn" %>
+  </div>
+
+  <div class="block">
+    <div class="block-precisions">
+      <h2>Détails</h2>
+      <p><%= @wine.country %> | <%=@wine.region.region_name %> </p>
+      <p><%=@wine.price.price_fork %> </p>
+    </div>
+    <div class="block-avis">
+      <h2>Avis</h2>    
+    </div> 
+  </div>
+</div>
