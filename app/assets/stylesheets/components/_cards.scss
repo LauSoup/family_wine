@@ -86,13 +86,18 @@ article.cardcusto {
 		background:$white;
 		transition:$timing-1 $transition;
 		.title {
-			position:relative;
+      position:relative;
 			letter-spacing: 3px;
 			color:$big-stone;
 			font-family: $grotesque-black;
-			font-size: 1rem;
+			font-size: 0.8rem;
 			text-transform: uppercase;
-			text-shadow: 0 0 0px lighten($big-stone, 20);
+      text-shadow: 0 0 0px lighten($big-stone, 20);
+      margin-right: 18px;
+      word-break: break-all;
+      padding-right: 9px;
+      text-align: justify;
+      text-justify: inter-character;
 		}
 		.flag {
 			@include pos(absolute, $top:7px, $right: 37px);
@@ -107,30 +112,32 @@ article.cardcusto {
 		.date, .seats {
 			margin-bottom: 10px;
 			text-transform: uppercase;
-			font-size: .85rem;
+			font-size: .7rem;
 			color:$lite-big-stone;
 			font-family: $grotesque-regular;
 		}
 		.seats {
 			display:inline-block;
-			margin-bottom: 24px;
-			padding-bottom:24px;
+			margin-bottom: 12px;
+			padding-bottom: 12px;
 			border-bottom:1px solid $lite-grey;
 			opacity:0;
 			transition:$timing-2 $transition;
 		}
 		.txt {
 			font-family: $merriweather;
-			line-height: 2;
-			font-size: .95rem;
+			line-height: 1.5;
+			font-size: .7rem;
 			color:$lite-big-stone;
 			opacity:0;
-			transition:$timing-2 $transition;
+      transition:$timing-2 $transition;
+      overflow: hidden;
+      height: 55px;
 		}
 		.details {
 			@include pos(absolute, $left:0, $bottom:0);
-			margin: 10px 0;
-			padding:20px 24px;
+			margin: 10px 0 2px 0;
+			padding:20px 24px 14px 24px;
 			letter-spacing: 1px;
 			color:$smalt-blue;
 			font-family: $grotesque-black;

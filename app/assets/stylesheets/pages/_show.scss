@@ -1,0 +1,15 @@
+
+.header-wine-show {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  h1 {
+    color: $light-gray;
+    text-align:center;
+  }
+}

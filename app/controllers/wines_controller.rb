@@ -3,7 +3,6 @@ class WinesController < ApplicationController
   def new
     @wine = Wine.new
     @countries = Wine.countries
-
   end
 
   def create
@@ -16,6 +15,10 @@ class WinesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @wine = Wine.find(params[:id])
   end
 
   private
