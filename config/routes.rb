@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :wines, only:[:new, :create, :update, :edit, :show]
 
+  get 'dashboard', to: 'pages#dashboard'
 end

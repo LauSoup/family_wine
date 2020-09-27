@@ -42,7 +42,7 @@ end
 
 p "Creating Conso tags"
 
-tags = ["Apéro", "Viande rouge", "Viande blanche", "Poissons", "Coquillages", "Charcuterie", "Léger passe-partout", "Puissant" ]
+tags = ["Parfait pour l'apéro", "Léger passe-partout", "Puissant", "Sucré" ]
 
 tags.each do |tag| 
   ConsoTag.create(conso_name: tag)
@@ -50,6 +50,7 @@ end
 
 p "Creating wines"
 countries = ["France", "Italie", "Espagne", "Etats-Unis", "Argentine", "Australie", "Chili", "Allemagne", "Afrique du Sud", "Chine"]
+categories = ["Rouge", "Blanc", "Champagne / Mousseux", "Rosé", "Autre vin", "Autre alcool"]
 
 img = "https://source.unsplash.com/3uJt73tr4hI"
 file = URI.open(img)
@@ -61,6 +62,7 @@ file = URI.open(img)
   price = Price.random
   region = Region.random
   country = countries.sample
+  category = categories.sample
 
   wine = Wine.create(
     name: name,
@@ -68,7 +70,8 @@ file = URI.open(img)
     user_id: user.id,
     price_id: price.id,
     region_id: region.id,
-    country: country
+    country: country,
+    category: category
   )
   wine.photo.attach(io: File.open('app/assets/images/glasses.png'), filename: 'glasses.png', content_type: 'image/png')
 end
