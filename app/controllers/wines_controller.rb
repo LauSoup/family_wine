@@ -6,10 +6,12 @@ class WinesController < ApplicationController
   def new
     @wine = Wine.new
     @countries = Wine.countries
+    @categories = Wine.categories
   end
 
   def create
     @countries = Wine.countries
+    @categories = Wine.categories
     @wine = Wine.new(wine_params)
     @wine.user = current_user
     if @wine.valid?
@@ -33,10 +35,12 @@ class WinesController < ApplicationController
   def edit
     @wine = Wine.find(params[:id]) 
     @countries = Wine.countries
+    @categories = Wine.categories
   end
 
   def update
     @countries = Wine.countries
+    @categories = Wine.categories
     @wine = Wine.find(params[:id]) 
     if @wine.update(wine_params)
       redirect_to wine_path(@wine)
@@ -48,7 +52,7 @@ class WinesController < ApplicationController
   private
 
   def wine_params
-    params.require(:wine).permit(:name, :description, :user_id, :price_id, :region_id, :country, :photo)
+    params.require(:wine).permit(:name, :description, :user_id, :price_id, :region_id, :country, :photo, :category)
   end
 
 end

@@ -5,4 +5,9 @@ class PagesController < ApplicationController
     @wines = Wine.all
   end
 
+  def dashboard
+    @user = current_user
+    @wines = Wine.where(user: current_user)
+  end
+
 end
