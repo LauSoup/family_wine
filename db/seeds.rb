@@ -55,32 +55,56 @@ categories = ["Rouge", "Blanc", "Champagne / Mousseux", "Rosé", "Autre vin", "A
 img = "https://source.unsplash.com/3uJt73tr4hI"
 file = URI.open(img)
 
-10.times do
-  name = "Vin #{(1..100).to_a.sample}"
-  description = "Blablablablablablablablabla"
-  user = User.first
-  price = Price.random
-  region = Region.random
-  country = countries.sample
-  category = categories.sample
 
-  wine = Wine.create(
-    name: name,
-    description: description,
-    user_id: user.id,
-    price_id: price.id,
-    region_id: region.id,
-    country: country,
-    category: category
-  )
-  wine.photo.attach(io: File.open('app/assets/images/glasses.png'), filename: 'glasses.png', content_type: 'image/png')
-end
+name = "L'exemple"
+description = "Je suis juste là pour montrer l'exemple"
+user = User.first
+price = Price.random
+region = Region.random
+country = "France"
+category = categories.sample
 
-p "Creating wine conso"
+wine = Wine.create(
+  name: name,
+  description: description,
+  user_id: user.id,
+  price_id: price.id,
+  region_id: region.id,
+  country: country,
+  category: category
+)
+wine.photo.attach(io: File.open('app/assets/images/glasses.png'), filename: 'glasses.png', content_type: 'image/png')
 
-  wines = Wine.all
-  wines.each do |wine|
-    (1..3).to_a.sample.times do
-      WineConso.create(wine_id: wine.id, conso_tag_id: ConsoTag.random.id)
-    end
-  end
+
+
+
+
+# 10.times do
+#   name = "Vin #{(1..100).to_a.sample}"
+#   description = "Blablablablablablablablabla"
+#   user = User.first
+#   price = Price.random
+#   region = Region.random
+#   country = countries.sample
+#   category = categories.sample
+
+#   wine = Wine.create(
+#     name: name,
+#     description: description,
+#     user_id: user.id,
+#     price_id: price.id,
+#     region_id: region.id,
+#     country: country,
+#     category: category
+#   )
+#   wine.photo.attach(io: File.open('app/assets/images/glasses.png'), filename: 'glasses.png', content_type: 'image/png')
+# end
+
+# p "Creating wine conso"
+
+#   wines = Wine.all
+#   wines.each do |wine|
+#     (1..3).to_a.sample.times do
+#       WineConso.create(wine_id: wine.id, conso_tag_id: ConsoTag.random.id)
+#     end
+#   end
